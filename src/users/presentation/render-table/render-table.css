@@ -1,4 +1,6 @@
 table {
+    width:fit-content;
+    margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.348);
     border-radius: 5px;
     padding: 5px;

@@ -1,8 +1,6 @@
 .card{
-    display: flex;
-    justify-content: center;
+  margin-bottom:3%;
 }
-
 
 /* Todo lo de debajo es generado por Vite */
 :root {
@@ -79,6 +77,7 @@ h1 {
 }
 
 .hero {
+  margin-top: 3%;
   position: relative;
 
   .base,
