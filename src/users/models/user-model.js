@@ -1,3 +1,6 @@
+/**
+ * Modelo de User que usa la aplicación
+ */
 export class User{
 
     /**

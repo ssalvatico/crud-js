@@ -5,8 +5,8 @@ import './render-table.css';
 let table;
 
 /**
- * ...
- * @returns {}
+ * Crea los headers de la tabla de usuarios
+ * @returns {HTMLTableElement}
  */
 const createTable = () => {
     const table = document.createElement('table');
@@ -28,7 +28,7 @@ const createTable = () => {
 };
 
 /**
- * ...
+ * Renderiza la tabla de usuarios
  * @param {HTMLDivElement} element 
  */
 export const renderTable = (element) => {

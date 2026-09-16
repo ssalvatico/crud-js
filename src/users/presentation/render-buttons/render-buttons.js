@@ -3,6 +3,7 @@ import { renderTable } from '../render-table/render-table';
 import './render-buttons.css';
 
 /**
+ * Renderiza los botones `<- Prev`, `Next ->` y el índice de la página actual
  * @param {HTMLDivElement} element
  */
 export const renderButtons = (element) => {

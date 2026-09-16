@@ -6,7 +6,7 @@ const state = {
 }
 
 /**
- * ...
+ * Carga la siguiente página de usuarios en caso de que exista
  * @returns {}
  */
 const loadNextPage = async () => {
@@ -17,7 +17,7 @@ const loadNextPage = async () => {
 };
 
 /**
- * ...
+ * Carga la página anterior de usuarios en caso de que exista
  */
 const loadPreviousPage = async () => {
     const users = await loadUsersByPage(state.currentPage - 1);

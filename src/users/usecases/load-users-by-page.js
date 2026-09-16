@@ -2,7 +2,8 @@ import { localHostUserToModel } from "../mappers/localhost-user.mapper";
 
 
 /**
- * 
+ * Se encarga de solicitar los datos a la bd para
+ * decidir si hay usuarios para mostrar o no
  * @param {Number} page
  * @returns {Promise<User[]>}
  */
