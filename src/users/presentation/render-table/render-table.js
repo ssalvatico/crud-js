@@ -42,7 +42,6 @@ export const renderTable = (element) => {
     }    
     
     let tableHTML = '';
-    console.log(tableHTML);
     users.forEach(user => {
         tableHTML += `
         <tr>

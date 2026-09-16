@@ -1,7 +1,5 @@
 export class User{
 
-
-
     /**
      * @param {Like<Object>} userDataLike 
      */
@@ -14,10 +12,4 @@ export class User{
         this.lastName  = lastName;
         this.gender    = gender;
     }
-
-
-
-
-
-
 };
