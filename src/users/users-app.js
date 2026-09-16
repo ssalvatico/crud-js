@@ -12,5 +12,5 @@ export const UsersApp = async(element) => {
     
     element.innerHTML = '';
     renderTable(element);
-    
+
 };

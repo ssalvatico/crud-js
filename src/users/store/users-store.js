@@ -5,6 +5,10 @@ const state = {
     users: [],
 }
 
+/**
+ * ...
+ * @returns {}
+ */
 const loadNextPage = async () => {
     const users = await loadUsersByPage(state.currentPage+1);
     if(users.length === 0) return;
@@ -12,10 +16,20 @@ const loadNextPage = async () => {
     state.currentPage += 1;
     state.users = users;
 };
+
+/**
+ * ...
+ */
 const loadPreviousPage = async () => {throw new Error("Implementar");
 };
+/**
+ * ...
+ */
 const onUserChanged = () => {throw new Error("Implementar");
 };
+/**
+ * ...
+ */
 const reloadPage = () => {throw new Error("Implementar");
 };
 
@@ -25,6 +39,8 @@ export default {
     onUserChanged,
     reloadPage,
 
+    /** @returns {User[]} */
     getUsers: () => [...state.users],
+    /** @returns {Number} */
     getCurrentPage: () => state.currentPage,
 };

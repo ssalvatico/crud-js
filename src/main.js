@@ -18,6 +18,6 @@ document.querySelector('#app').innerHTML = `
 `;
 
 const element = document.querySelector('.card');
-
+console.log(element);
 // BreakingBadApp(element);
 UsersApp(element);

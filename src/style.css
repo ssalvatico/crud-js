@@ -1,3 +1,10 @@
+.card{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Todo lo de debajo es generado por Vite */
 :root {
   --text: #6b6375;
   --text-h: #08060d;
