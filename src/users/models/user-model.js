@@ -6,7 +6,7 @@ export class User{
     /**
      * @param {Like<Object>} userDataLike 
      */
-    constructor({ id, isActive, balance, avatar, firstName, lastName, gender}){
+    constructor({ id, isActive = false, balance = 0, avatar = '', firstName, lastName, gender}){
         this.id        = id;
         this.isActive  = isActive;
         this.balance   = balance;

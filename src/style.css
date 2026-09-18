@@ -2,6 +2,14 @@
   margin-bottom:3%;
 }
 
+:root{
+  zoom: 80%;
+}
+
+#app{
+  position: relative;
+}
+
 /* Todo lo de debajo es generado por Vite */
 :root {
   --text: #6b6375;
