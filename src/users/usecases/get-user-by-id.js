@@ -2,7 +2,7 @@ import { localHostUserToModel } from '../mappers/localhost-user.mapper';
 import { User } from '../models/user-model';
 
 /**
- * 
+ * Busca el usuario en la base de datos y lo mapea al modelo User
  * @param {String|Number} id 
  * @returns {Promise<User>}
  */

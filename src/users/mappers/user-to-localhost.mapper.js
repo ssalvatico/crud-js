@@ -1,7 +1,11 @@
 import { User } from '../models/user-model';
 
 /**
- * @param {User} user
+ * Mapper de elementos de clase User a elementos Like<User>
+ * Este modelo sirve para las solicitudes a la base de datos
+ * 
+ * @param {User} user 
+ * @returns {Like<User>}
  */
 export const userModelToLocalHost = (user) => {
     

@@ -3,7 +3,7 @@ import './render-add-button.css';
 import '../render-modal/render-modal.css';
 
 /**
- * 
+ * Renderiza el botón de '+' agregar usuario
  * @param {HTMLDivElement} element 
  */
 export const renderAddButton = (element,/*callback*/) => {

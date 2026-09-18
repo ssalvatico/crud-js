@@ -22,9 +22,9 @@ export const saveUser = async ( userLike ) => {
 };
 
 /**
- * 
+ * Crea un nuevo usuario en la base de datos
  * @param {Like<User>} user 
- * @returns {}
+ * @returns {Promise<Like<User>>}
  */
 const createUser = async ( user ) => {
 
@@ -41,8 +41,9 @@ const createUser = async ( user ) => {
 };
 
 /**
- * 
- * @param {Like<User>} user 
+ * Se encarga de actualizar el usuario en la base de datos
+ * @param {Like<User>} user
+ * @returns {Promise<Like<User>>}
  */
 const updateUser = async (user) => {
     const url = `${import.meta.env.VITE_BASE_URL}/users/${ user.id }`
@@ -53,8 +54,6 @@ const updateUser = async (user) => {
             'Content-Type': 'application/json'
         }
     });
-
     const updatedUser = await response.json();
-    console.log({updatedUser});
     return updatedUser;
 }

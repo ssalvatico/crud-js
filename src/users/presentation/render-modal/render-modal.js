@@ -13,6 +13,7 @@ let form;
 let loadedUser = {};
 
 /**
+ * Renderiza el modal para la creación/actualización de usuarios
  * @param {String|Number} id
  */
 export const showModal = async (id) => {
@@ -24,7 +25,7 @@ export const showModal = async (id) => {
 };
 
 /**
- * 
+ * Setea los valores del modal en el caso de actualización del usuario
  * @param {User} user 
  */
 const setFormValues = (user) => {
@@ -36,7 +37,7 @@ const setFormValues = (user) => {
 };
 
 /**
- * 
+ * Oculta el modal y limpia sus campos
  */
 export const hideModal = () => {
     modal?.classList.add('hide-modal');
@@ -45,7 +46,7 @@ export const hideModal = () => {
 
 
 /**
- * 
+ * Se encarga del ciclo de uso completo del modal
  * @param {HTMLDivElement} element
  * @param {{userLike} => Promise<void>} saveUserCallback
  */

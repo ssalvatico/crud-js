@@ -8,7 +8,6 @@ const state = {
 
 /**
  * Carga la siguiente página de usuarios en caso de que exista
- * @returns {}
  */
 const loadNextPage = async () => {
     const users = await loadUsersByPage(state.currentPage + 1);
@@ -28,7 +27,11 @@ const loadPreviousPage = async () => {
 };
 
 /**
- * @param {User} user
+ * Maneja la actualización de un usuario.
+ * 
+ * Si existe, lo modifica.
+ * Si no existe, lo crea
+ * @param {User} updatedUser
  */
 const onUserChanged = (updatedUser) => {
     let flag = false;
@@ -47,7 +50,7 @@ const onUserChanged = (updatedUser) => {
 };
 
 /**
- * ...
+ * Recarga la página de la tabla de usuarios
  */
 const reloadPage = async () => {
     const users = await loadUsersByPage(state.currentPage);

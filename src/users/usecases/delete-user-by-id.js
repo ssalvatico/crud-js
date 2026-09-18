@@ -1,7 +1,7 @@
 
 
 /**
- * 
+ * Elimina el usuario en la base de datos
  * @param {String|Number} id 
  */
 export const deleteUserById = async (id) => {

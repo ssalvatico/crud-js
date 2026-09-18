@@ -30,8 +30,9 @@ const createTable = () => {
 };
 
 /**
- * 
- * @param {MouseEvent} event 
+ * Maneja el evento 'click' del botón select
+ * @param {MouseEvent} event
+ * @returns {void}
  */
 const tableSelectListener = (event) => {
     const select = event.target.closest('.select-user')
@@ -40,6 +41,11 @@ const tableSelectListener = (event) => {
     showModal(id);
 };
 
+/**
+ * Maneja el evento 'click' del botón delete
+ * @param {MouseEvent} event 
+ * @returns {void}
+ */
 const tableDeleteListener = async (event) => {
     const deleteUser = event.target.closest('.delete-user');
     if(!deleteUser) return;
@@ -51,7 +57,6 @@ const tableDeleteListener = async (event) => {
         renderTable();
     } catch {
         alert(`Couldn't delete user ${id}`);
-        console.error('estupido');
     }
 };
 
