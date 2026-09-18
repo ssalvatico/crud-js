@@ -1,0 +1,9 @@
+.fab-button{
+    font-size: 25px !important;
+    position: absolute;
+    font-weight: 500;
+    bottom: 5px;
+    right: 5px;
+    border-radius: 50%;
+    padding: 15px 25px;
+}

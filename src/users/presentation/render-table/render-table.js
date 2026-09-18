@@ -1,7 +1,9 @@
 import usersStore from '../../store/users-store';
+import { deleteUserById } from '../../usecases/delete-user-by-id';
+import { showModal } from '../render-modal/render-modal';
 import './render-table.css';
 
-/** @type {} */
+/** @type {HTMLTableElement} */
 let table;
 
 /**
@@ -28,6 +30,32 @@ const createTable = () => {
 };
 
 /**
+ * 
+ * @param {MouseEvent} event 
+ */
+const tableSelectListener = (event) => {
+    const select = event.target.closest('.select-user')
+    if(!select) return;
+    const id = select.getAttribute('data-id');
+    showModal(id);
+};
+
+const tableDeleteListener = async (event) => {
+    const deleteUser = event.target.closest('.delete-user');
+    if(!deleteUser) return;
+    const id = deleteUser.getAttribute('data-id');
+    try {
+        await deleteUserById(id);
+        await usersStore.reloadPage();
+        document.querySelector('#current-page').innerText = usersStore.getCurrentPage();
+        renderTable();
+    } catch {
+        alert(`Couldn't delete user ${id}`);
+        console.error('estupido');
+    }
+};
+
+/**
  * Renderiza la tabla de usuarios
  * @param {HTMLDivElement} element 
  */
@@ -38,7 +66,10 @@ export const renderTable = (element) => {
     if( !table ){
         table = createTable();
         element.append(table);
-        console.warn('TODO: Listeners');
+
+        //Listeners
+        table.addEventListener('click', tableSelectListener);
+        table.addEventListener('click', tableDeleteListener);
     }    
     
     let tableHTML = '';
@@ -51,9 +82,9 @@ export const renderTable = (element) => {
             <td>${ user.lastName }</td>
             <td>${ user.isActive }</td>
             <td>
-                <a href="#/" data-id="${user.id}">Select</a>
+                <a href="#/" class="select-user" data-id="${user.id}">Select</a>
                 |
-                <a href="#/" data-id="${user.id}">Delete</a>
+                <a href="#/" class="delete-user" data-id="${user.id}">Delete</a>
             </td>
         </tr>
         `;

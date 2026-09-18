@@ -4,11 +4,12 @@ button{
     margin: 10px;
     padding: 3px;
     border-radius: 5px;
-    border-color:#1e1e1e;
-    background-color: #2b2b2b;
+    border-color:#16161627;
+    background-color: #2b2b2b71;
 }
 button:hover{
     background-color: #56337f7f;
+    border-color: #2b2b2b71;
     cursor: pointer;
 }
 
