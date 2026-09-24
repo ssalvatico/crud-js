@@ -34,25 +34,9 @@ server/
 └── db.json              # Base de datos simulada para json-server
 ```
 
-## 🚀 Instalación
-
-Cloná el repositorio e instalá las dependencias:
-
-```bash
-git clone <URL_DEL_REPOSITORIO>
-cd crud-js
-npm install
-```
-
 ## ⚙️ Configuración
 
-Este proyecto usa una variable de entorno para apuntar a la API. Copiá el archivo de ejemplo y completala:
-
-```bash
-cp .env.template .env
-```
-
-Editá `.env` con la URL del servidor (por defecto, `json-server` corre en el puerto `3001`):
+Este proyecto usa una variable de entorno para apuntar a la API
 
 ```
 VITE_BASE_URL=http://localhost:3001
@@ -60,7 +44,7 @@ VITE_BASE_URL=http://localhost:3001
 
 ## ▶️ Uso
 
-Necesitás dos procesos corriendo en paralelo: el servidor de datos y el servidor de desarrollo.
+Se necesitan dos procesos corriendo en paralelo: el servidor de datos y el servidor de desarrollo.
 
 **1. Levantar la API simulada (json-server):**
 
@@ -76,7 +60,7 @@ Esto expone los datos de `server/db.json` en `http://localhost:3001`.
 npm run dev
 ```
 
-Abrí la URL que te muestre la terminal (por defecto `http://localhost:5173`).
+La app corre en la URL que te muestra la terminal (por defecto `http://localhost:5173`).
 
 ## 📜 Scripts disponibles
 
@@ -87,6 +71,3 @@ Abrí la URL que te muestre la terminal (por defecto `http://localhost:5173`).
 | `npm run preview` | Previsualiza el build de producción                |
 | `npm run server`  | Levanta json-server con la base de datos mock      |
 
-## 📄 Licencia
-
-Este proyecto está disponible bajo la licencia MIT. Sentite libre de usarlo y modificarlo.
